@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Here is the text in the browser tab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- this is an HTML comment. This doesn't show up on the sceen. They are notes for developers-->
+    <!-- items in the <head> is not meant to be seen on the screen -->
+
+    <!-- 
+      Other thngs in the head include 
+      - links to stylesheets and other resources
+      - style blocks
+      - script tags for javascript or for including external javascript files
+      - meta tags that describe the web page, informs the browser about behaviors (eg how to scale based on device width)
+    -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/helpers.css" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="dark-theme">
+    <!-- the body holds the visual part of the page and provides an information hiearchy and semantic structure  -->
+    <header class="pt-2">
+      <div class="container">
+        <nav
+          class="d-flex flex-justify-between row flex-align-items-center px-2"
+        >
+          <div class="brand">
+            <a href="#" class="d-flex flex-align-items-center">
+              <img src="https://via.placeholder.com/50" />
+              <span class="ml-3">My cool profile</span>
+            </a>
+          </div>
+          <ul class="d-flex flex-justify-between">
+            <li><a href="#">Home</a></li>
+            <li><a href="#article-1">Article 1</a></li>
+            <li><a href="#article-2">Article 2</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <div class="row flex-justify-start">
+        <div class="px-1">
+          <h1>Main idea of your page</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+            reiciendis maxime atque velit totam blanditiis animi beatae
+            consequatur laborum cum commodi. Possimus, cumque necessitatibus.
+            Vero facere nulla nobis blanditiis dolorum!
+          </p>
+        </div>
+      </div>
+      <article id="article-1" class="row mb-2">
+        <div class="col-12 col-md-4 col-lg-3 article-title">
+          <h2>Article 1 title</h2>
+        </div>
+        <div class="flex-direction-column col-12 col-md-8 col-lg-9">
+          <p>
+            Odio ornare dolor nisi rutrum id curabitur tortor velit quam. Sit
+            curabitur fusce faucibus consectetuer dictumst urna parturient
+            viverra. Sagittis facilisi curabitur ullamcorper nostra odio semper
+            vestibulum.
+          </p>
+          <section>
+            <h3>Ridiculus interdum dui odio per</h3>
+            <p>
+              Enim taciti litora natoque molestie tincidunt luctus lorem.
+              Posuere nostra dis aliquam euismod imperdiet penatibus dictumst
+              finibus vehicula non placerat. Nisl vulputate dictumst lacus quis
+              magnis in.
+            </p>
+          </section>
+          <section>
+            <h3>Volutpat dignissim aliquet nullam pede</h3>
+            <p>
+              Gravida risus nam lobortis in dignissim sed viverra placerat.
+              Tristique consequat ornare auctor interdum nulla dui ridiculus
+              feugiat maecenas. Diam ridiculus ullamcorper fusce arcu magnis
+              fames orci phasellus.
+              <figure>
+                <img src="https://via.placeholder.com/200" />
+                <figcaption>You can caption images</figcaption>
+              </figure>
+            </p>
+          </section>
+        </div>
+      </article>
+      <article id="article-2" class="row mb-2">
+        <div class="col-12 col-md-4 col-lg-3 article-title">
+          <h2>Article 2 title is sort of long</h2>
+        </div>
+        <div class="flex-direction-column col-12 col-md-8 col-lg-9">
+          <div class="row">
+            <div class="col-12 p-0">
+              <a href="#">
+                <figure class="project project-1">
+                  <figcaption>Project #1</figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 pl-0">
+              <a href="#">
+                <figure class="project project-2">
+                  <figcaption>Project #2</figcaption>
+                </figure>
+              </a>
+            </div>
+            <div class="col-12 col-md-6 pr-0">
+              <a href="#">
+                <figure class="project project-3">
+                  <figcaption>Project #3</figcaption>
+                </figure>
+              </a>
+            </div>
+          </div>
+
+          <p>
+            Odio ornare dolor nisi rutrum id curabitur tortor velit quam. Sit
+            curabitur fusce faucibus consectetuer dictumst urna parturient
+            viverra. Sagittis facilisi curabitur ullamcorper nostra odio semper
+            vestibulum.
+          </p>
+          <section>
+            <h3>Ridiculus interdum dui odio per</h3>
+            <p>
+              Enim taciti litora natoque molestie tincidunt luctus lorem.
+              Posuere nostra dis aliquam euismod imperdiet penatibus dictumst
+              finibus vehicula non placerat. Nisl vulputate dictumst lacus quis
+              magnis in.
+            </p>
+          </section>
+        </div>
+      </article>
+      <!-- 
+        Forms can have an action. Historically, we would use the action attribute as the
+        url to the backend location to which we send the form for processing (e.g., store in
+        a database) when the form is submitted. The submission will also trigger a page load
+        as a result of the backend's We will teach you how to use javascript to accomplish
+        the same thing but without a page load, a feature of Single Page Applications (SPA's).
+
+        If the action is blank or not supplied, then the form is submitted to the same url as
+        this page. This was typical of PHP and ASP pages.
+      -->
+      <form name="contact_form" action="" method="POST">
+        <div id="contact" class="row px-1">
+          <div class="col-12 col-md-4 col-lg-3 article-title">
+            <h2 class="mb-0">Contact form</h2>
+
+            <small>(fields marked * are required)</small>
+          </div>
+          <div class="col-12 col-md-8 col-lg-9">
+            <div class="mb-1">
+              <label for="full_name">Full Name *:</label>
+              <input
+                type="text"
+                id="full_name"
+                name="full_name"
+                required
+                placeholder="enter full name here"
+              />
+            </div>
+            <div class="mb-1">
+              <label for="email_address">Email *:</label>
+              <input
+                id="email_address"
+                name="email_address"
+                type="email"
+                required
+                placeholder="enter full name here"
+              />
+            </div>
+            <input type="submit" value="Submit form" />
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer class="pt-2 pb-5 mt-5">
+      <div class="container">
+        <div class="row flex-justify-center">
+          <small>Copyright © 2022 John Young, All rights reserved</small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

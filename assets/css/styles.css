@@ -1,0 +1,239 @@
+:root {
+  --dark: rgba(55, 57, 58, 1);
+  --offdark: rgba(116, 45, 58, 1);
+  --light: rgba(232, 238, 242, 1);
+  --dklight: rgb(214, 201, 201, 1);
+  --grey: rgba(199, 211, 221, 1);
+  --dkaccent: rgba(119, 182, 234, 1);
+  --ltaccent: rgba(255, 223, 177, 1);
+  --link: rgba(214, 173, 154, 1);
+  --dklink: rgba(80, 88, 147, 1);
+}
+
+body.dark-theme {
+  --bgcolor: var(--dark);
+  --color: var(--light);
+  --altbgcolor: var(--offdark);
+  --altcolor: var(--dklight);
+  --headings: var(--ltaccent);
+  --links: var(--dklight);
+}
+
+body.light-theme {
+  --color: var(--dark);
+  --bgcolor: var(--light);
+  --altbgcolor: var(--dklink);
+  --altcolor: var(--light);
+  --headings: var(--dklink);
+  --links: var(--dklight);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 15rem;
+}
+
+body {
+  background-color: var(--bgcolor);
+  color: var(--color);
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--headings);
+  line-height: 1.1;
+  margin-bottom: 0.625em;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+p {
+  margin-bottom: 2.4rem;
+}
+
+p::first-letter {
+  font-size: 3rem;
+}
+
+header {
+  background-color: var(--altbgcolor);
+  color: var(--altcolor);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+header > div.container {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+header > div.container > nav {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+header nav .brand {
+  flex: 0 0 100%;
+  padding-left: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2rem;
+}
+
+header nav .brand a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+header nav ul {
+  flex: 0 0 100%;
+  margin-top: 1.6rem;
+}
+
+header nav ul li {
+  flex-grow: 1;
+}
+
+header nav ul li a {
+  color: var(--links);
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  padding: 0.8rem 2rem;
+  /* border-radius: 5px; */
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  border: 1px solid var(--links);
+}
+
+header nav ul li a:hover {
+  /* box-shadow: 2px 3px 9px -1px rgba(255, 255, 255, 0.7); */
+  /* border: 1px dashed var(--altbgcolor); */
+  color: var(--altbgcolor);
+  background-color: var(--altcolor);
+}
+
+main {
+  padding-top: 3rem;
+}
+
+.project {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  /* border: 2px solid var(--headings); */
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+
+.project:hover {
+  transform: scale(1.01);
+}
+
+.project figcaption {
+  position: absolute;
+  bottom: 0rem;
+  left: 2rem;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, bottom 0.1s;
+}
+
+.project:hover figcaption {
+  opacity: 1;
+  bottom: 2rem;
+}
+
+.project-1 {
+  background-image: url("../img/pexels-andre-furtado-370717.jpg");
+  color: var(--light);
+}
+
+.project-2 {
+  background-image: url("../img/pexels-dom-j-310452.jpg");
+  color: var(--dark);
+}
+
+.project-3 {
+  background-image: url("../img/pexels-sam-kolder-2387873.jpg");
+  color: var(--light);
+}
+
+footer {
+  background-color: var(--altbgcolor);
+  color: var(--altcolor);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    scroll-padding-top: 10rem;
+  }
+
+  main {
+    padding-top: 3rem;
+  }
+
+  header nav .brand {
+    flex: 1 1 25%;
+  }
+
+  header nav ul {
+    flex: 1 1 65%;
+  }
+
+  header {
+    padding-bottom: 1.6rem;
+  }
+
+  header nav ul {
+    margin-top: 0;
+  }
+
+  header nav ul li a {
+    border-radius: 5px;
+    border: none;
+  }
+
+  header nav ul li a:hover {
+    /* box-shadow: 2px 3px 9px -1px rgba(255, 255, 255, 0.7); */
+    border: 1px dashed var(--altbgcolor);
+  }
+
+  .article-title {
+    border-right: 1px solid var(--headings);
+  }
+}
