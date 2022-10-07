@@ -106,7 +106,7 @@ header nav .brand {
 }
 
 header nav .brand a {
-  color: var(--color);
+  color: var(--links);
   text-decoration: none;
 }
 
