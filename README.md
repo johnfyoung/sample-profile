@@ -16,3 +16,7 @@ The css is divided into a few files:
   This is the custom css **just for this site**.
 
 The reset, grid and helpers can be re-used on other projects.
+
+## Themes
+
+There are two themes. The themes can be switched by applying `dark-theme` or `light-theme` to the `body`.
